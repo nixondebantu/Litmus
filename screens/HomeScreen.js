@@ -45,7 +45,6 @@ export default function HomeScreen( {navigation} ) {
   return (
     <View style={styles.container}>
         <ScrollView>
-            {/* <Text>Home Screen</Text> */}
             <HomeTitleBar done={averageProgress}/>
             {subList.map((subject) => (
                 <InfoCard key={subject.id} 
