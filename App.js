@@ -12,6 +12,18 @@ import Bio1_6 from './screens/Bio1/Bio1_6';
 import Bio1_7 from './screens/Bio1/Bio1_7';
 import Bio1_8 from './screens/Bio1/Bio1_8';
 import Bio1_9 from './screens/Bio1/Bio1_9';
+import Bio2_1 from './screens/Bio2/Bio2_1';
+import Bio2_10 from './screens/Bio2/Bio2_10';
+import Bio2_11 from './screens/Bio2/Bio2_11';
+import Bio2_12 from './screens/Bio2/Bio2_12';
+import Bio2_2 from './screens/Bio2/Bio2_2';
+import Bio2_3 from './screens/Bio2/Bio2_3';
+import Bio2_4 from './screens/Bio2/Bio2_4';
+import Bio2_5 from './screens/Bio2/Bio2_5';
+import Bio2_6 from './screens/Bio2/Bio2_6';
+import Bio2_7 from './screens/Bio2/Bio2_7';
+import Bio2_8 from './screens/Bio2/Bio2_8';
+import Bio2_9 from './screens/Bio2/Bio2_9';
 import Bng1_1 from './screens/Bng1/Bng1_1';
 import Bng1_10 from './screens/Bng1/Bng1_10';
 import Bng1_11 from './screens/Bng1/Bng1_11';
@@ -53,6 +65,34 @@ import Chem2_2 from './screens/Chem2/Chem2_2';
 import Chem2_3 from './screens/Chem2/Chem2_3';
 import Chem2_4 from './screens/Chem2/Chem2_4';
 import Chem2_5 from './screens/Chem2/Chem2_5';
+import Eng1_1 from './screens/Eng1/Eng1_1';
+import Eng1_10 from './screens/Eng1/Eng1_10';
+import Eng1_11 from './screens/Eng1/Eng1_11';
+import Eng1_12 from './screens/Eng1/Eng1_12';
+import Eng1_13 from './screens/Eng1/Eng1_13';
+import Eng1_14 from './screens/Eng1/Eng1_14';
+import Eng1_15 from './screens/Eng1/Eng1_15';
+import Eng1_16 from './screens/Eng1/Eng1_16';
+import Eng1_17 from './screens/Eng1/Eng1_17';
+import Eng1_2 from './screens/Eng1/Eng1_2';
+import Eng1_3 from './screens/Eng1/Eng1_3';
+import Eng1_4 from './screens/Eng1/Eng1_4';
+import Eng1_5 from './screens/Eng1/Eng1_5';
+import Eng1_6 from './screens/Eng1/Eng1_6';
+import Eng1_7 from './screens/Eng1/Eng1_7';
+import Eng1_8 from './screens/Eng1/Eng1_8';
+import Eng1_9 from './screens/Eng1/Eng1_9';
+import Eng2_1 from './screens/Eng2/Eng2_1';
+import Eng2_10 from './screens/Eng2/Eng2_10';
+import Eng2_11 from './screens/Eng2/Eng2_11';
+import Eng2_2 from './screens/Eng2/Eng2_2';
+import Eng2_3 from './screens/Eng2/Eng2_3';
+import Eng2_4 from './screens/Eng2/Eng2_4';
+import Eng2_5 from './screens/Eng2/Eng2_5';
+import Eng2_6 from './screens/Eng2/Eng2_6';
+import Eng2_7 from './screens/Eng2/Eng2_7';
+import Eng2_8 from './screens/Eng2/Eng2_8';
+import Eng2_9 from './screens/Eng2/Eng2_9';
 import HM1_1 from './screens/HM1/HM1_1';
 import HM1_2 from './screens/HM1/HM1_2';
 import HM1_3 from './screens/HM1/HM1_3';
@@ -71,6 +111,21 @@ import ICT2 from './screens/ICT/ICT2';
 import ICT3 from './screens/ICT/ICT3';
 import ICT4 from './screens/ICT/ICT4';
 import ICT5 from './screens/ICT/ICT5';
+import Phy1_1 from './screens/Phy1/Phy1_1';
+import Phy1_2 from './screens/Phy1/Phy1_2';
+import Phy1_3 from './screens/Phy1/Phy1_3';
+import Phy1_4 from './screens/Phy1/Phy1_4';
+import Phy1_5 from './screens/Phy1/Phy1_5';
+import Phy1_6 from './screens/Phy1/Phy1_6';
+import Phy1_7 from './screens/Phy1/Phy1_7';
+import Phy1_8 from './screens/Phy1/Phy1_8';
+import Phy2_1 from './screens/Phy2/Phy2_1';
+import Phy2_2 from './screens/Phy2/Phy2_2';
+import Phy2_3 from './screens/Phy2/Phy2_3';
+import Phy2_4 from './screens/Phy2/Phy2_4';
+import Phy2_5 from './screens/Phy2/Phy2_5';
+import Phy2_6 from './screens/Phy2/Phy2_6';
+import Phy2_7 from './screens/Phy2/Phy2_7';
 import Bio1 from './screens/subjects/Bio1';
 import Bio2 from './screens/subjects/Bio2';
 import Bng1 from './screens/subjects/Bng1';
@@ -173,55 +228,61 @@ export default function App() {
     { id: 79, name: 'উদ্ভিদ প্ৰজনন (MAT)', component:Bio1_10 },
     { id: 80, name: 'জীবপ্রযুক্তি', component:Bio1_11 },
     { id: 81, name: 'জীবের পরিবেশ, বিস্তার ও সংরক্ষণ (MAT)', component:Bio1_12 },
-    // { id: 1, name: 'প্রাণীর বিভিন্নতা ও শ্রেণিবিন্যাস' },
-    // { id: 2, name: 'প্রাণীর পরিচিতি' },
-    // { id: 3, name: 'পরিপাক ও শোষণ' },
-    // { id: 4, name: 'রক্ত সঞ্চালন' },
-    // { id: 5, name: 'শ্বাসক্রিয়া ও শ্বসন' },
-    // { id: 6, name: 'চলন ও অঙ্গচালনা' },
-    // { id: 7, name: 'বর্জ্য ও নিষ্কাশন (MAT)' },
-    // { id: 8, name: 'সমন্বয় ও নিয়ন্ত্রণ (MAT)' },
-    // { id: 9, name: 'মানব জীবনের ধারাবাহিকতা (MAT)' },
-    // { id: 10, name: 'মানবদেহের প্রতিরক্ষা (MAT)' },
-    // { id: 11, name: 'জিনতত্ব ও বিবর্তন' },
-    // { id: 12, name: 'প্রাণীর আচরণ (MAT)' },
-    // { id: 1, name: 'People or Institution Making History' },
-    // { id: 2, name: 'Education Life' },
-    // { id: 3, name: 'Dreams' },
-    // { id: 4, name: 'Youthful Achievers' },
-    // { id: 5, name: 'Relationships' },
-    // { id: 6, name: 'Adolescence' },
-    // { id: 7, name: 'Lifestyle' },
-    // { id: 8, name: 'Human Rights' },
-    // { id: 9, name: 'Tour\'s and Travels' },
-    // { id: 10, name: 'Flow chart' },
-    // { id: 11, name: 'Summary' },
-    // { id: 12, name: 'Fill in the blanks with clues' },
-    // { id: 13, name: 'Fill in the blanks without clues' },
-    // { id: 14, name: 'Rearrange' },
-    // { id: 15, name: 'Graph and Chart' },
-    // { id: 16, name: 'Story Writing' },
-    // { id: 17, name: 'Letter' },
-    // { id: 1, name: 'Prepositions' },
-    // { id: 2, name: 'Completing Sentence with Phrase' },
-    // { id: 3, name: 'Completing Sentence' },
-    // { id: 4, name: 'Right Form of Verb' },
-    // { id: 5, name: 'Narration' },
-    // { id: 6, name: 'Modifier' },
-    // { id: 7, name: 'Connectors' },
-    // { id: 8, name: 'Synonym-Antonym' },
-    // { id: 9, name: 'Punctuation & Capitalization' },
-    // { id: 10, name: 'Application' },
-    // { id: 11, name: 'Paragraph' },
-    // { id: 1, name: 'ভৌত জগৎ ও পরিমাপ (স্ফেরোমিটার শুধু)' },
-    // { id: 2, name: 'ভেক্টর' },
-    // { id: 3, name: 'নিউটনিয়ান বলবিদ্যা' },
-    // { id: 4, name: 'কাজ ক্ষমতা ও শক্তি' },
-    // { id: 5, name: 'মহাকর্ষ ও অভিকর্ষ' },
-    // { id: 6, name: 'পদার্থের গাঠনিক ধর্ম( আংশিক )' },
-    // { id: 7, name: 'পর্যায়বৃত্ত গতি' },
-    // { id: 8, name: 'আদর্শ গ্যাস ও গ্যাসের গতিতত্ব' },
-    // { id: ,name: ,component: },
+    { id: 82, name: 'প্রাণীর বিভিন্নতা ও শ্রেণিবিন্যাস', component:Bio2_1 },
+    { id: 83, name: 'প্রাণীর পরিচিতি', component:Bio2_2 },
+    { id: 84, name: 'পরিপাক ও শোষণ', component:Bio2_3 },
+    { id: 85, name: 'রক্ত সঞ্চালন', component:Bio2_4 },
+    { id: 86, name: 'শ্বাসক্রিয়া ও শ্বসন', component:Bio2_5 },
+    { id: 87, name: 'চলন ও অঙ্গচালনা', component:Bio2_6 },
+    { id: 88, name: 'বর্জ্য ও নিষ্কাশন (MAT)', component:Bio2_7 },
+    { id: 89, name: 'সমন্বয় ও নিয়ন্ত্রণ (MAT)', component:Bio2_8 },
+    { id: 90, name: 'মানব জীবনের ধারাবাহিকতা (MAT)', component:Bio2_9 },
+    { id: 91, name: 'মানবদেহের প্রতিরক্ষা (MAT)', component:Bio2_10 },
+    { id: 92, name: 'জিনতত্ব ও বিবর্তন', component:Bio2_11 },
+    { id: 93, name: 'প্রাণীর আচরণ (MAT)', component:Bio2_12 },
+    { id: 94, name: 'People or Institution Making History', component:Eng1_1 },
+    { id: 95, name: 'Education Life', component:Eng1_2 },
+    { id: 96, name: 'Dreams', component:Eng1_3 },
+    { id: 97, name: 'Youthful Achievers', component:Eng1_4 },
+    { id: 98, name: 'Relationships', component:Eng1_5 },
+    { id: 99, name: 'Adolescence', component:Eng1_6 },
+    { id: 100, name: 'Lifestyle', component:Eng1_7 },
+    { id: 101, name: 'Human Rights', component:Eng1_8 },
+    { id: 102, name: 'Tour\'s and Travels', component:Eng1_9 },
+    { id: 103, name: 'Flow chart', component:Eng1_10 },
+    { id: 104, name: 'Summary', component:Eng1_11 },
+    { id: 105, name: 'Fill in the blanks with clues', component:Eng1_12 },
+    { id: 106, name: 'Fill in the blanks without clues', component:Eng1_13 },
+    { id: 107, name: 'Rearrange', component:Eng1_14 },
+    { id: 108, name: 'Graph and Chart', component:Eng1_15 },
+    { id: 109, name: 'Story Writing', component:Eng1_16 },
+    { id: 110, name: 'Letter', component:Eng1_17 },
+    { id: 111, name: 'Prepositions', component:Eng2_1 },
+    { id: 112, name: 'Completing Sentence with Phrase', component:Eng2_2 },
+    { id: 113, name: 'Completing Sentence', component:Eng2_3 },
+    { id: 114, name: 'Right Form of Verb', component:Eng2_4 },
+    { id: 115, name: 'Narration', component:Eng2_5 },
+    { id: 116, name: 'Modifier', component:Eng2_6 },
+    { id: 117, name: 'Connectors', component:Eng2_7 },
+    { id: 118, name: 'Synonym-Antonym', component:Eng2_8 },
+    { id: 119, name: 'Punctuation & Capitalization', component:Eng2_9 },
+    { id: 120, name: 'Application', component:Eng2_10 },
+    { id: 121, name: 'Paragraph', component:Eng2_11 },
+    { id: 122, name: 'ভৌত জগৎ ও পরিমাপ (স্ফেরোমিটার শুধু)', component:Phy1_1 },
+    { id: 123, name: 'ভেক্টর', component:Phy1_2 },
+    { id: 124, name: 'নিউটনিয়ান বলবিদ্যা', component:Phy1_3 },
+    { id: 125, name: 'কাজ ক্ষমতা ও শক্তি', component:Phy1_4 },
+    { id: 126, name: 'মহাকর্ষ ও অভিকর্ষ', component:Phy1_5 },
+    { id: 127, name: 'পদার্থের গাঠনিক ধর্ম( আংশিক )', component:Phy1_6 },
+    { id: 128, name: 'পর্যায়বৃত্ত গতি', component:Phy1_7 },
+    { id: 129, name: 'আদর্শ গ্যাস ও গ্যাসের গতিতত্ব', component:Phy1_8 },
+    { id: 130, name: 'তাপগতিবিদ্যা', component:Phy2_1 },
+    { id: 131, name: 'স্থির তড়িৎ', component:Phy2_2 },
+    { id: 132, name: 'চল তড়িৎ', component:Phy2_3 },
+    { id: 133, name: 'ভৌত আলোক বিজ্ঞান', component:Phy2_4 },
+    { id: 134, name: 'আধুনিক পদার্থবিজ্ঞানের সূচনা', component:Phy2_5 },
+    { id: 135, name: 'পরমাণুর মডেল নিউক্লিয়ার পদার্থবিজ্ঞান', component:Phy2_6 },
+    { id: 136, name: 'সেমিকন্ডাক্টর ও ইলেকট্রনিক্স', component:Phy2_7 },
   ]
   return (
     <NavigationContainer>
