@@ -3,6 +3,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { ScrollView, View } from 'react-native';
 import InfoCard from '../../components/InfoCard';
+import TitleBar from '../../components/TitleBar';
 
 export default function ICT({ route, navigation }) {
   const { name } = route.params;
@@ -17,6 +18,8 @@ export default function ICT({ route, navigation }) {
     { id: 7, name: 'সেমিকন্ডাক্টর ও ইলেকট্রনিক্স' },
   ]);
 
+  const [averageProgress, setAverageProgress] = useState(0);
+  
   useFocusEffect(
     React.useCallback(() => {
       const loadProgress = async () => {
@@ -25,14 +28,25 @@ export default function ICT({ route, navigation }) {
           return { ...chapter, done: progress !== null ? Number(progress) : 0 };
         }));
         setChapterList(updatedChapterList);
-      };
+      
+        const totalProgress = updatedChapterList.reduce((total, chapter) => total + Number(chapter.done), 0);
+        const avgProgress = (totalProgress / updatedChapterList.length).toFixed(2);
+        setAverageProgress(avgProgress);
+      
+        try {
+          await AsyncStorage.setItem(`@progress/${name}`, avgProgress.toString());
+        } catch (error) {
+          console.error('Error saving average progress:', error);
+        }
+      };      
       loadProgress();
     }, [])
   );
 
   return (
-    <View>
-      <ScrollView>
+    <View style={{flex:1}}>
+      <TitleBar done={averageProgress} />
+      <ScrollView style={{}}>
         {chapterList.map((chapter) => (
           <InfoCard key={chapter.id} 
             done={chapter.done} 
@@ -43,3 +57,4 @@ export default function ICT({ route, navigation }) {
     </View>
   );
 }
+

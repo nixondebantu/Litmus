@@ -155,7 +155,7 @@ export default function App() {
     { id:9 ,name:'English 2nd Paper' ,component:Eng2 },
     { id:10 ,name:'উচ্চতর গণিত ১ম পত্র' ,component:HM1 },
     { id:11 ,name:'উচ্চতর গণিত ২য় পত্র' ,component:HM2 },
-    { id:12 ,name:'ICT' ,component:ICT },
+    { id:12 ,name:'তথ্য ও যোগাযোগ প্রযুক্তি' ,component:ICT },
     { id:13 ,name:'পদার্থবিজ্ঞান ১ম পত্র' ,component:Phy1 },
     { id:14 ,name:'পদার্থবিজ্ঞান ২য় পত্র' ,component:Phy2 },
     { id:15 ,name:'জটিল সংখ্যা' ,component:HM2_3 },

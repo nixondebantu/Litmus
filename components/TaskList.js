@@ -98,7 +98,6 @@ export default function TaskList({ name, varName }) {
 
   return (
     <View style={styles.container}>
-        <Text>{varName}</Text>
       <View style={styles.progressWrapper}>
         <Text style={styles.progressTxt}>Progress: </Text>
         <Text style={[styles.progressTxt,{color:'#341e9d'}]}>{calculateProgress()}%</Text>
@@ -171,6 +170,7 @@ const styles = StyleSheet.create({
     flex:1,
   },
   progressWrapper:{
+    marginTop:10,
     flexDirection:'row',
     justifyContent:'center'
   },

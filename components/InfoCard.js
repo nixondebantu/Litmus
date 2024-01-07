@@ -5,6 +5,7 @@ const InfoCard = (props) => {
   return (
     <View>
       <TouchableOpacity onPress={props.onPress}>
+        
         <View style={styles.cardWrapper}>
           <Text style={styles.persentage}>{props.done}% </Text>
           <Text style={styles.cardTitle}>{props.title}</Text>
