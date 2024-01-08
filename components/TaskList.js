@@ -4,6 +4,7 @@ import CheckBox from 'expo-checkbox';
 import React, { useEffect, useState } from 'react';
 import {
   Alert,
+  Dimensions,
   KeyboardAvoidingView,
   ScrollView,
   StyleSheet,
@@ -13,6 +14,8 @@ import {
   View,
 } from 'react-native';
 
+const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
 
 export default function TaskList({ name, varName }) {
   const [tasks, setTasks] = useState([]);
@@ -105,7 +108,7 @@ export default function TaskList({ name, varName }) {
     <View style={styles.taskListContainer}>
     <ScrollView>
         {tasks.map((task, index) => (
-          <View style={styles.taskItem} key={index}>
+          <TouchableOpacity style={styles.taskItem} key={index} onPress={()=>toggleDone(index)}>
             <View style={styles.itemLeft}>
               <CheckBox
                 style={styles.checkbox}
@@ -136,7 +139,7 @@ export default function TaskList({ name, varName }) {
               <Entypo name="trash" size={30} color="red" />
             </TouchableOpacity>
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
     </ScrollView>
     </View>
@@ -183,33 +186,33 @@ const styles = StyleSheet.create({
   },
   writeTaskWrapper:{
     position:'absolute',
-    bottom:20,
+    bottom:screenHeight * 0.02,  //20
     width:'100%',
     flexDirection:'row',
     justifyContent:'space-around',
     alignItems:'center',
   },
   txtInput:{
-    marginLeft:10,
-    paddingVertical:15,
-    paddingHorizontal:15,
+    marginLeft:screenWidth * 0.02,  //10
+    paddingVertical:screenHeight * 0.015, //15
+    paddingHorizontal:screenHeight * 0.015, //15
     backgroundColor:'#FFF',
     borderRadius:60,
     borderColor:'#C0C0C0',
     borderWidth:1,
-    width:250,
+    width:screenWidth * 0.6,
   },
   scoreInput:{
-    paddingVertical:15,
-    paddingHorizontal:15,
+    paddingVertical:screenHeight * 0.015, //15
+    paddingHorizontal:screenHeight * 0.015, //15
     backgroundColor:'#FFF',
     borderRadius:60,
     borderColor:'#C0C0C0',
     borderWidth:1,
-    width:80,
+    width:screenWidth * 0.2  //80
   },
   addBtn:{
-    marginRight:10
+    marginRight:screenWidth * 0.02  //10
   },
   taskListContainer:{
     flex:1,

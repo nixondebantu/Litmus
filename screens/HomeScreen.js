@@ -1,11 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import HomeTitleBar from '../components/HomeTitleBar';
 import InfoCard from '../components/InfoCard';
+import FirstTimer from './FirstTimer';
 
 export default function HomeScreen( {navigation} ) {
+  const [aboutPage,setAboutPage] = useState(false);
+  const [username, setUsername] = useState('');
+  const [avatar, setAvatar] = useState(0);
     const [subList,setSubList] = useState([
         {   id:1, name:'বাংলা ১ম পত্র'    },
         {   id:2, name:'বাংলা ২য় পত্র'    },
@@ -21,6 +25,23 @@ export default function HomeScreen( {navigation} ) {
         {   id:12, name:'জীববিজ্ঞান ২য় পত্র'  },
         {   id:13, name:'তথ্য ও যোগাযোগ প্রযুক্তি'    }        
     ]);
+
+    const loadUserData = async () => {
+      const storedUsername = await AsyncStorage.getItem('userName');
+      setUsername(storedUsername||'User');
+  
+      const storedAvatar = await AsyncStorage.getItem('userAvatar');
+      setAvatar(JSON.parse(storedAvatar)||1);
+    };
+  
+    useEffect(() => {
+      loadUserData();
+    }, []);
+    
+    const handleInfoUpdate = async () => {
+      await AsyncStorage.setItem('firstTimeUser', 'done');
+      setAboutPage(false);
+    };
 
     const [averageProgress, setAverageProgress] = useState(0);
 
@@ -44,20 +65,27 @@ export default function HomeScreen( {navigation} ) {
 
   return (
     <View style={styles.container}>
+      {aboutPage ? (
+        <FirstTimer onFinish={()=>setAboutPage(false)} setUsername={setUsername} setAvatar={setAvatar} />
+      ) : (
         <ScrollView>
-            <HomeTitleBar done={averageProgress}/>
-            {subList.map((subject) => (
-                <InfoCard key={subject.id} 
-                done={subject.done} 
-                title={subject.name} 
-                onPress={()=>navigation.navigate(subject.name,{name:subject.name})}/>
-        ))}
+          <HomeTitleBar done={averageProgress} name={username} avatar={avatar} onFinish={()=>setAboutPage(true)} setAboutPage={setAboutPage} />
+          {subList.map((subject) => (
+            <InfoCard
+              key={subject.id}
+              done={subject.done}
+              title={subject.name}
+              onPress={() => navigation.navigate(subject.name, { name: subject.name })}
+            />
+          ))}
         </ScrollView>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
     container:{
+      flex:1
     }
 })

@@ -1,5 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'react-native';
 import Bio1_1 from './screens/Bio1/Bio1_1';
 import Bio1_10 from './screens/Bio1/Bio1_10';
 import Bio1_11 from './screens/Bio1/Bio1_11';
@@ -286,7 +287,14 @@ export default function App() {
   ]
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <StatusBar hidden={true}/>
+      <Stack.Navigator initialRouteName='Home'
+      screenOptions={{
+        headerStyle:{
+          backgroundColor:'#013b63'
+        },
+        headerTintColor:'#FFF'
+      }}>
         {
           screenData.map((screen)=><Stack.Screen key={screen.id} name={screen.name} component={screen.component} />)
         }
